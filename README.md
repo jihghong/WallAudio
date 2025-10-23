@@ -43,11 +43,11 @@ USB 線長度不夠時，可用「主動式USB延長線」，於遠端端口接�
 
 將環境變數 AUDIO_DEV 設定為以下字串，注意前方要加 `audio=`
 
-    audio=@device_cm_{12D9A762-90C8-11D0-BD43-00A0C911CE68}\wave_{785D73F3-069C-4C3D-83CB-A28D2A99D286}
+    audio=麥克風 (ATR2500x-USB Microphone)
 
 可用以下 setx 指令設定，或進入上述「進階系統設定」操作介面設定
 
-    setx AUDIO_DEV "audio=@device_cm_{12D9A762-90C8-11D0-BD43-00A0C911CE68}\wave_{785D73F3-069C-4C3D-83CB-A28D2A99D286}"
+    setx AUDIO_DEV "audio=麥克風 (ATR2500x-USB Microphone)"
 
 注意：環境變數在後續開啟的視窗中才會生效
 
