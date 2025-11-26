@@ -12,7 +12,9 @@ WallAudio 噪音蒐證工具
 
 我是買 audio-technica ATR2500x-USB 電容式麥克風。
 
-USB 線長度不夠時，可用「主動式USB延長線」，於遠端端口接入直流電源，可為訊號增益。我是在光華商場六樓買到三公尺的，網路上也買得到。
+USB 線長度不夠時，可用「主動式USB延長線」，於遠端端口接入直流電源，可為訊號增益。我是在光華商場六樓買到十公尺的，網路上也買得到。
+
+須注意USB線延長到十公尺，會錄到很大聲的低頻噪音，可加裝「USB 隔離器」來改善。我是在光華商場的今華電子買到「ADuM3160」的。
 
 插上 USB 麥克風後，檢查 Windows -> 設定 -> 系統 -> 音效 -> 輸入，應該可以看到此麥克風裝置。
 
@@ -41,13 +43,9 @@ USB 線長度不夠時，可用「主動式USB延長線」，於遠端端口接�
     [dshow @ 000002491b4ca168] "麥克風 (ATR2500x-USB Microphone)" (audio)
     [dshow @ 000002491b4ca168]   Alternative name "@device_cm_{12D9A762-90C8-11D0-BD43-00A0C911CE68}\wave_{785D73F3-069C-4C3D-83CB-A28D2A99D286}"
 
-將環境變數 AUDIO_DEV 設定為以下字串，注意前方要加 `audio=`
+將麥克風名稱的關鍵字設定在環境變數 AUDIO_DEV 中。本範例關鍵字為「ATR2500x」，可用以下 setx 指令設定，或進入上述「進階系統設定」操作介面設定
 
-    audio=麥克風 (ATR2500x-USB Microphone)
-
-可用以下 setx 指令設定，或進入上述「進階系統設定」操作介面設定
-
-    setx AUDIO_DEV "audio=麥克風 (ATR2500x-USB Microphone)"
+    setx AUDIO_DEV "ATR2500x"
 
 注意：環境變數在後續開啟的視窗中才會生效
 
